@@ -1,1 +1,1 @@
-# pixova-light
+# slim
