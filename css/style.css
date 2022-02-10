@@ -3187,8 +3187,27 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-#go-to-next {
-    display: none;
+#GoToNext {
+    
+    background: #fe9191;
+    height: 50px;
+    width: 50px;
+    right: 31px;
+    bottom: 18px;
+    position: fixed;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-weight:800;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 48px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 10px 3px rgb(108 98 98 / 20%);
+}
+
+#GoToTop {
+    display:ontop;
     background: #fe9191;
     height: 50px;
     width: 50px;
