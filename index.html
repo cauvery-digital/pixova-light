@@ -116,7 +116,7 @@ a.dataLayer=a.dataLayer||[],a.zaraz.track=(e,t)=>{for(key in a.zarazData.tracks.
 </div>
 </div>
 </section>
-<div id="go-to-next">
+<div id="GoToNext">
     <a title="Go to next" href="#here"><i class="fa fa-level-down"  style="font-size: 30px;color:white; text-align:center; margin-top:8px"></i></a>
 </div>
 <section id="here" class="ftco-section ftco-no-pb ftco-no-pt ftco-program bg-light" id="programs-section">
@@ -974,7 +974,9 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 </div>
 </div>
 </footer>
-
+<div id="GoToTop">
+    <a title="Go to next" href="#here"><i class="fa fa-level-down"  style="font-size: 30px;color:white; text-align:center; margin-top:8px"></i></a>
+</div>
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
 <script src="js/jquery-3.2.1.min.js"></script>
@@ -1011,15 +1013,27 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 <script>eval(mod_pagespeed_VdVXmBzLKZ);</script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6da2d4a1eaff6eef","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
 
-<script>
+ <script>
+$(window).scroll(function() {
+    if ($(this).scrollTop()>10)
+     {
+        $('#GoToNext').hide(1000);
+     }
+    else
+     {
+      $('#GoToNext').show(1000);
+     }
+ });
+</script>  
+ <script>
 //Get the button
-var mybutton = document.getElementById("go-to-next");
+var mybutton = document.getElementById("GoToTop");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > -10) {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -1031,6 +1045,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-</script>
+</script>   
+    
 </body>
 </html>
