@@ -974,7 +974,7 @@ Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/clou
 </div>
 </div>
 </footer>
-<div id="GoToTop">
+<div id="GoToTop" class="go-to-top hide">
     <a title="Go to next" href="#"><i class="fa fa-level-up"  style="font-size: 30px;color:white; text-align:center; margin-top:8px"></i></a>
 </div>
 <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
@@ -1026,26 +1026,22 @@ $(window).scroll(function() {
  });
 </script>  
  <script>
-//Get the button
-var mybutton = document.getElementById("GoToTop");
+    $(document).scroll(function() {
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+        myID = document.getElementById("GoToTop");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+        var myScrollFunc = function () {
+            var y = window.scrollY;
+            if (y >= 7800) {
+                myID.className = "go-to-top show"
+            } else {
+                myID.className = "go-to-top hide"
+            }
+        };
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>   
+        window.addEventListener("scroll", myScrollFunc);
+    });
+</script>
     
 </body>
 </html>
