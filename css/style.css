@@ -3206,7 +3206,7 @@ textarea.form-control {
     box-shadow: 0 0 10px 3px rgb(108 98 98 / 20%);
 }
 
-#GoToTop {
+.go-to-top {
     display:ontop;
     background: #fe9191;
     height: 50px;
@@ -3214,7 +3214,9 @@ textarea.form-control {
     right: 31px;
     bottom: 18px;
     position: fixed;
-    cursor: pointer;
+    z-index: 1;
+    transition: all 1s;
+    /*cursor: pointer; */
     color: #fff;
     font-size: 20px;
     font-weight:800;
@@ -3223,4 +3225,13 @@ textarea.form-control {
     line-height: 48px;
     border: 2px solid transparent;
     box-shadow: 0 0 10px 3px rgb(108 98 98 / 20%);
+}
+
+.hide {
+    opacity:0;
+    left:-100%;
+}
+.show {
+    opacity:1;
+    Right:0;
 }
