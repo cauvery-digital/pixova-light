@@ -1,0 +1,26 @@
+.accordion-body {
+    background-color:#E9ECE6;
+    text-align: left;
+    width:100%;
+}.icos {
+    font-size: 100px;
+    color: #fe7878;
+}.icons {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}.accordion-button {
+    background-color: #fe7878;
+    font-size:18px;
+    font-weight: 900;
+    color: #E9ECE6;
+}	
+}.bi-chevron-double-down {
+    font-size: 25;
+    font-weight: 700;
+    padding-right: 20px;
+	margin-left:50px;
+    margin:auto;
+	margin-bottom:auto;
+}
+.bg-kal{background-color: #fe7878}
